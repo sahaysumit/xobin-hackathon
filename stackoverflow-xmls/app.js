@@ -66,11 +66,15 @@ fs.readFile( './dumplist/Users.xml', function(err, data) {
 
 app.use('/posts', function(req, res){
   res.locals.posts = Posts;
-  res.render("Posts.jade")
+  res.render("Posts")
 });
 app.use('/users', function(req, res){
   res.locals.users = Users;
-  res.render("Users.jade");
+  res.render("Users");
+});
+
+app.use('/', function(req, res){
+  res.render('index.jade')
 });
 
 
