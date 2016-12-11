@@ -1,0 +1,17 @@
+{
+  "name": "socket-io-chat",
+  "version": "1.0.0",
+  "description": "## Install dependencies If you haven't done so already, go to the root of the repository and `npm install` the dependencies.",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ecstatic": "^2.1.0",
+    "socket.io": "^1.7.2",
+    "socket.io-p2p-server": "^1.2.0"
+  }
+}
