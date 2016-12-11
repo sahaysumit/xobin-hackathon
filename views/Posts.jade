@@ -1,0 +1,42 @@
+doctype html
+html
+	head
+		title Posts
+		link(rel="stylesheet" href="//d3o8b3fl56q00x.cloudfront.net/css/bootstrap.min.css")
+		link(rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/dt/dt-1.10.10/datatables.min.css")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript")
+		link(href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" type="text/css")
+		script(src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js")
+		
+	body
+		
+		-var count = 0
+		input(type="hidden" value="#{totalCount}")
+		div
+			table.table(style="width:100%")
+				thead
+					tr
+						th Sr. No.
+						th Tags
+						th Question
+						th Body
+						th Score
+						
+
+				tbody
+
+					for items in Posts.posts.row
+						for i in items
+							-var similar = 0
+							-count = count+1
+							if (i.Tags)
+							tr
+								td #{count}
+								td #{i.Tags}
+								td #{i.Title}
+								td #{i.Body}
+								td #{i.Score}
+								
+
+
+				
